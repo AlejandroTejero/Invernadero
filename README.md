@@ -1,1 +1,4 @@
 # Invernadero
+
+make
+./main
