@@ -1,35 +1,33 @@
-# Invernadero
+# Invernadero (C++)
 
-# Invernadero (C++) — Simulación de sensores y gestión de usuarios
+**Invernadero** es un proyecto en **C++** orientado a **programación orientada a objetos (POO)** que simula un sistema de invernadero con **sensores** y una interfaz por terminal.  
+Incluye un sistema básico de **usuarios** (login) y **persistencia en ficheros** para guardar información entre ejecuciones.
 
-Proyecto en C++ orientado a programación modular y POO para simular un entorno de **invernadero** con distintos **sensores** y un flujo de **login/gestión de usuarios**. Incluye persistencia básica de datos y documentación automática.
+---
 
-## Features
-- Login y gestión de usuarios (Usuario / Administrador) a partir de un fichero `users.txt`.
-- Sensores simulados (temperatura, humedad, aire, iluminación, RGB, térmica, cámara).
-- Menú interactivo por terminal para consultar datos por sensor.
-- Guardado de lecturas en fichero binario `sensors.dat`.
-- Documentación con **Doxygen** y depuración con **GDB**.
+## Características
+- Simulación de un invernadero con varios **sensores** (temperatura, humedad, aire/iluminación, etc.).
+- Interfaz por **terminal** para consultar lecturas y navegar por el sistema.
+- Sistema de **usuarios** con autenticación simple.
+- **Persistencia**:
+  - usuarios en fichero de texto (`users.txt`)
+  - sensores/lecturas en fichero binario (`sensors.dat`)
+- Proyecto modular con separación por clases y ficheros `.h/.cpp`.
+- Incluye configuración para documentación con **Doxygen** y compilación mediante **Makefile**.
 
-## Estructura del proyecto
-- `main.cpp`: punto de entrada.
-- `Login.*`: flujo principal de autenticación/gestión.
-- `BDUsuarios.*`: carga y gestión de usuarios desde `users.txt`.
-- `BDSensores.*`: configuración de sensores y persistencia en `sensors.dat`.
-- `S*.*/C*.*/SensorCamara.*`: implementación de sensores.
-- `Doxyfile`: configuración para generar documentación.
-- `Makefile`: compilación rápida.
+---
 
-## Requisitos
-- Linux / macOS (recomendado) o WSL en Windows
-- `g++` y `make`
-- (Opcional) `figlet` para la interfaz visual si tu terminal lo usa:
-  - Debian/Ubuntu: `sudo apt-get install figlet`
+## Tecnologías
+- **C++**
+- Compilación con `g++` + `make`
+- (Opcional) **Doxygen** para documentación
+
+---
 
 ## Compilación y ejecución
-Desde la carpeta del proyecto:
 
 ```bash
+cd Invernadero/Ficheros
 make
 ./main
-``
+```
